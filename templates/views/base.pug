@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    link(rel="stylesheet" href="/css/styles.css")
+    link(rel="icon" href="/img/weather.png")
+    title #{title}
+  body
+    // HEADER
+    include ../partials/_header
+
+    // CONTENT
+    .main-content 
+      block content 
+        p Use this site to get your weather!
+
+        form
+          input(placeholder="Address")
+          button Search
+
+        p#message-1 Address 
+        p#message-2 Forecaset about Selected location 
+
+    // FOOTER
+    include ../partials/_footer
+
+    script(src='/js/app.js')
